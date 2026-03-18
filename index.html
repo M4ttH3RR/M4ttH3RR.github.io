@@ -13,63 +13,39 @@
             <h1>Matthew Herriman</h1>
         </div>
         <p>Computer Science | Cybersecurity & Software Development</p>
-        
-        <!-- Dark Mode Toggle -->
         <button id="dark-mode-toggle">🌙 Dark Mode</button>
-
         <a href="resume.html" class="resume-btn">Download Resume</a>
     </header>
 
     <!-- About Section -->
     <section id="about" class="fade-in">
         <h2>About Me</h2>
-        <p>
-            Computer Science student with experience in Python, web development, and cybersecurity. 
-            Passionate about building projects that solve real-world problems.
-        </p>
+        <p>Computer Science student with experience in Python, web development, and cybersecurity. Passionate about building projects that solve real-world problems.</p>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="fade-in">
         <h2>Projects</h2>
 
-        <!-- Project 1: NoteMD -->
         <div class="project">
             <h3>NoteMD (Health Tracking Project)</h3>
-            <a href="https://github.com/M4ttH3RR/BisonHacks25HealthTrack" target="_blank" class="project-btn">
-                View Project →
-            </a>
-            <p>
-                Developed a health monitoring system using simulated continuous glucose monitor (CGM) data 
-                to analyze patient health trends and improve treatment compliance.
-            </p>
+            <a href="https://github.com/M4ttH3RR/BisonHacks25HealthTrack" target="_blank" class="project-btn">View Project →</a>
+            <p>Developed a health monitoring system using simulated CGM data to analyze patient health trends.</p>
             <p><strong>Tech:</strong> Python, Arduino, Machine Learning</p>
         </div>
 
-        <!-- Project 2: Port Scanner -->
         <div class="project">
             <h3>Cybersecurity Port Scanner</h3>
-            <a href="https://github.com/M4ttH3RR/port-scanner" target="_blank" class="project-btn">
-                View Project →
-            </a>
-            <p>
-                Python-based GUI port scanner that detects open ports and displays results in a user-friendly window.
-            </p>
+            <a href="https://github.com/M4ttH3RR/port-scanner" target="_blank" class="project-btn">View Project →</a>
+            <p>Python-based GUI port scanner detecting open ports.</p>
             <p><strong>Tech:</strong> Python, Tkinter, Multithreading</p>
         </div>
 
-        <!-- Project 3: Password Strength Checker -->
         <div class="project">
             <h3>Password Strength Checker</h3>
-            <a href="https://password-checker.onrender.com" target="_blank" class="project-btn">
-                Try Live App →
-            </a>
-            <a href="https://github.com/M4ttH3RR/password_checker" target="_blank" class="project-btn">
-                View Code →
-            </a>
-            <p>
-                Web app that checks password strength and provides tips to improve security.
-            </p>
+            <a href="https://password-checker.onrender.com" target="_blank" class="project-btn">Try Live App →</a>
+            <a href="https://github.com/M4ttH3RR/password_checker" target="_blank" class="project-btn">View Code →</a>
+            <p>Web app that checks password strength and provides tips to improve security.</p>
             <p><strong>Tech:</strong> Python, Flask, HTML, CSS</p>
         </div>
     </section>
@@ -77,7 +53,7 @@
     <!-- Contact Section -->
     <section id="contact" class="fade-in">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:matthew.herriman@bison.howard.edu">matthew.herriman@bison.howard.edu</a></p>
+        <p>Email: <a href="mailto:matthewherriman@example.com">matthewherriman@example.com</a></p>
         <p>GitHub: <a href="https://github.com/M4ttH3RR" target="_blank">github.com/M4ttH3RR</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/matthewherriman" target="_blank">linkedin.com/in/matthewherriman</a></p>
     </section>
@@ -98,12 +74,10 @@
 
         // Dark mode toggle
         const toggleBtn = document.getElementById('dark-mode-toggle');
-        // Check saved preference
         if(localStorage.getItem('dark-mode') === 'true'){
             document.body.classList.add('dark-mode');
             toggleBtn.textContent = '☀ Light Mode';
         }
-
         toggleBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
             const isDark = document.body.classList.contains('dark-mode');
@@ -111,7 +85,7 @@
             toggleBtn.textContent = isDark ? '☀ Light Mode' : '🌙 Dark Mode';
         });
 
-        // Logo animation
+        // Logo spin animation
         const logo = document.getElementById('logo');
         logo.addEventListener('mouseenter', () => logo.classList.add('logo-spin'));
         logo.addEventListener('mouseleave', () => logo.classList.remove('logo-spin'));

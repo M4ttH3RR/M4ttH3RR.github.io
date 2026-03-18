@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matthew Herriman | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matthew Herriman | Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+<style>
+html {
+    scroll-behavior: smooth;
+}
+</style>
+
 </head>
 <body>
 
-<!-- Navbar -->
 <nav>
     <ul>
         <li><a href="#about">About</a></li>
@@ -26,28 +25,26 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
-
-    <!-- Dark Mode Button -->
     <button onclick="toggleDarkMode()" class="dark-btn">🌙</button>
 </nav>
 
-<!-- Header -->
-<header>
+<header class="fade-in">
     <h1>Matthew Herriman</h1>
-    <p>Computer Science Student | Aspiring Software Engineer</p>
+    <p>
+        Aspiring Software Engineer building machine learning and health-tech solutions.
+        Focused on real-world impact through data and systems design.
+    </p>
 </header>
 
-<!-- About -->
-<section id="about">
+<section id="about" class="fade-in">
     <h2>About Me</h2>
     <p>
-        Computer Science student interested in cybersecurity, software development,
-        and data-driven solutions. Passionate about building real-world technology.
+        Computer Science student passionate about cybersecurity, backend development,
+        and building scalable, data-driven systems.
     </p>
 </section>
 
-<!-- Skills -->
-<section id="skills">
+<section id="skills" class="fade-in">
     <h2>Skills</h2>
     <ul>
         <li><i class="fab fa-python"></i> Python</li>
@@ -58,48 +55,82 @@
     </ul>
 </section>
 
-<!-- Projects -->
-<section id="projects">
+<section id="projects" class="fade-in">
     <h2>Projects</h2>
 
+    <!-- NoteMD -->
     <div class="project">
+        <img src="notemd-logo.png" class="logo-img">
+
         <h3>NoteMD</h3>
 
-        <a href="https://github.com/yourusername/NoteMD" target="_blank">
-            <img src="notemd-screenshot.png" alt="NoteMD Screenshot" class="project-img">
+        <a href="https://github.com/yourusername/NoteMD" target="_blank" class="project-btn">
+            View Project →
         </a>
 
         <p>
-            Developed a machine learning-based health monitoring system using CGM data
-            to analyze diabetic kidney disease and treatment compliance.
+            Built a machine learning-based health monitoring system using CGM data 
+            to analyze diabetic kidney disease (DKD) risk and patient compliance.
         </p>
+
+        <p><strong>Tech:</strong> Python, Arduino, Streamlit</p>
+    </div>
+
+    <!-- SECOND PROJECT -->
+    <div class="project">
+        <h3>Cybersecurity Port Scanner</h3>
+
+        <a href="https://github.com/yourusername/port-scanner" target="_blank" class="project-btn">
+            View Project →
+        </a>
+
+        <p>
+            Developed a Python-based port scanner to detect open ports and analyze
+            network vulnerabilities on local systems.
+        </p>
+
+        <p><strong>Tech:</strong> Python, Sockets</p>
     </div>
 
 </section>
 
-<!-- Contact -->
-<section id="contact">
+<section class="fade-in">
+<h2>What I'm Looking For</h2>
+<p>
+Seeking Summer 2026 Software Engineering internships where I can apply my skills
+in backend development, data analysis, and cybersecurity.
+</p>
+</section>
+
+<section id="contact" class="fade-in">
     <h2>Contact</h2>
-    <p>Email: matthew.herriman@bison.howard.edu</p>
+    <p>Email: your-email@email.com</p>
 
     <p>
-        GitHub:
-        <a href="https://github.com/M4ttH3RR" target="_blank">
-            github.com/M4ttH3RR
+        <a href="https://github.com/yourusername" target="_blank">
+            GitHub Profile
         </a>
     </p>
 
-    <!-- Resume Button -->
-    <p>
-        <a href="resume.pdf" download class="resume-btn">Download Resume</a>
-    </p>
+    <a href="resume.pdf" download class="resume-btn">Download Resume</a>
 </section>
 
-<!-- Dark Mode Script -->
 <script>
 function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
 }
+
+// Fade-in on scroll
+const faders = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+    faders.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+            el.classList.add('show');
+        }
+    });
+});
 </script>
 
 </body>

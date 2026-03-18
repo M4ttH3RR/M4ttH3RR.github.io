@@ -8,7 +8,7 @@ body {
 /* Navbar */
 nav {
     background-color: #005a99;
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -31,6 +31,13 @@ nav a {
 
 nav a:hover {
     color: #00d4ff;
+}
+
+/* Dark Mode Button */
+.dark-btn {
+    margin-left: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
 /* Header */
@@ -87,7 +94,6 @@ li i {
     background: #fafafa;
 }
 
-/* Project Image */
 .project-img {
     width: 100%;
     max-width: 600px;
@@ -96,8 +102,45 @@ li i {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Hover Effect */
 .project-img:hover {
     transform: scale(1.03);
     transition: 0.3s;
+}
+
+/* Resume Button */
+.resume-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.resume-btn:hover {
+    background-color: #005f99;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode section {
+    background: #1e1e1e;
+}
+
+.dark-mode nav {
+    background-color: #000;
+}
+
+.dark-mode header {
+    background-color: #222;
+}
+
+.dark-mode li {
+    background: #333;
 }

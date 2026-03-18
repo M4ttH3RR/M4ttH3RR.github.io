@@ -1,6 +1,3 @@
-/* ------------------------ */
-/* General Styles           */
-/* ------------------------ */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -19,32 +16,13 @@ header {
     position: relative;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 3em;
-}
+header h1 { margin: 0; font-size: 3em; }
+header p { margin: 10px 0 20px; }
 
-header p {
-    margin: 10px 0 20px;
-}
+.header-top { display: flex; align-items: center; justify-content: center; gap: 15px; }
+#logo { height: 60px; transition: transform 0.6s ease; }
+.logo-spin { transform: rotate(360deg); }
 
-header .header-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-#logo {
-    height: 60px;
-    transition: transform 0.6s ease;
-}
-
-.logo-spin {
-    transform: rotate(360deg);
-}
-
-/* Resume Button */
 .resume-btn {
     padding: 12px 20px;
     background-color: #fff;
@@ -54,12 +32,8 @@ header .header-top {
     font-weight: bold;
     transition: all 0.3s ease;
 }
+.resume-btn:hover { background-color: #e6e6e6; }
 
-.resume-btn:hover {
-    background-color: #e6e6e6;
-}
-
-/* Dark Mode Toggle Button */
 #dark-mode-toggle {
     position: absolute;
     top: 20px;
@@ -73,17 +47,10 @@ header .header-top {
     background-color: #fff;
     color: #007acc;
 }
+#dark-mode-toggle:hover { background-color: #e6e6e6; }
 
-#dark-mode-toggle:hover {
-    background-color: #e6e6e6;
-}
+section { padding: 60px 20px; }
 
-/* Sections */
-section {
-    padding: 60px 20px;
-}
-
-/* Projects */
 .project {
     background-color: #fff;
     margin: 20px auto;
@@ -93,11 +60,7 @@ section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
-
-.project:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
+.project:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
 
 .project-btn {
     display: inline-block;
@@ -109,66 +72,22 @@ section {
     text-decoration: none;
     transition: all 0.3s ease;
 }
+.project-btn:hover { background-color: #005f99; transform: scale(1.05); }
 
-.project-btn:hover {
-    background-color: #005f99;
-    transform: scale(1.05);
+.fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+.fade-in.show { opacity: 1; transform: translateY(0); }
+
+#contact a { color: #007acc; text-decoration: none; transition: all 0.3s ease; }
+#contact a:hover { text-decoration: underline; }
+
+/* Dark Mode */
+body.dark-mode { background-color: #121212; color: #e0e0e0; }
+body.dark-mode header { background-color: #1e1e1e; color: #ffffff; }
+body.dark-mode .project { background-color: #1f1f1f; box-shadow: 0 5px 15px rgba(255,255,255,0.05); }
+body.dark-mode .project-btn, body.dark-mode .resume-btn, body.dark-mode #dark-mode-toggle {
+    background-color: #444444; color: #ffffff;
 }
-
-/* Fade-in Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease;
-}
-
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Contact Links */
-#contact a {
-    color: #007acc;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
-/* ------------------------ */
-/* Dark Mode Styles          */
-/* ------------------------ */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-body.dark-mode header {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
-body.dark-mode .project {
-    background-color: #1f1f1f;
-    box-shadow: 0 5px 15px rgba(255,255,255,0.05);
-}
-
-body.dark-mode .project-btn,
-body.dark-mode .resume-btn,
-body.dark-mode #dark-mode-toggle {
-    background-color: #444444;
-    color: #ffffff;
-}
-
-body.dark-mode .project-btn:hover,
-body.dark-mode .resume-btn:hover,
-body.dark-mode #dark-mode-toggle:hover {
+body.dark-mode .project-btn:hover, body.dark-mode .resume-btn:hover, body.dark-mode #dark-mode-toggle:hover {
     background-color: #666666;
 }
-
-body.dark-mode #contact a {
-    color: #90caf9;
-}
+body.dark-mode #contact a { color: #90caf9; }

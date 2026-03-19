@@ -4,25 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <title>Matthew Herriman</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #0f172a;
       color: white;
     }
 
     nav {
-      background-color: #020617;
+      position: sticky;
+      top: 0;
+      background-color: rgba(2,6,23,0.9);
       padding: 15px;
       text-align: center;
+      backdrop-filter: blur(10px);
     }
 
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     nav a:hover {
@@ -31,69 +42,105 @@
 
     .container {
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
 
     img {
-      width: 180px;
-      height: 180px;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 20px;
       border: 3px solid #38bdf8;
+      margin-bottom: 20px;
     }
 
     h1 {
+      font-size: 2.8em;
       margin-bottom: 10px;
-      font-size: 2.5em;
     }
 
     p {
       color: #94a3b8;
-    }
-
-    .section {
-      padding: 50px 20px;
-      max-width: 800px;
+      max-width: 600px;
       margin: auto;
     }
 
+    .section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
     .projects {
-      text-align: left;
+      display: grid;
+      gap: 20px;
     }
 
     .project {
       background: #020617;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 10px;
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
 
     .project h3 {
-      margin: 0;
+      margin-top: 0;
+    }
+
+    .skills {
+      text-align: center;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #020617;
+      padding: 8px 12px;
+      margin: 5px;
+      border-radius: 8px;
+      font-size: 0.9em;
+    }
+
+    .contact {
+      text-align: center;
     }
 
     a {
       color: #38bdf8;
     }
+
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <div class="container" id="about">
     <h1>Matthew Herriman</h1>
 
     <img src="profile.jpeg" alt="Profile Picture">
 
-    <p>Computer Science Student | Aspiring Software Engineer</p>
+    <p>
+      Computer Science student focused on software development, cybersecurity, and data-driven systems. 
+      Experienced in building real-world projects involving machine learning, networking, and web applications.
+    </p>
   </div>
 
   <!-- Projects -->
@@ -104,25 +151,54 @@
 
       <div class="project">
         <h3>NoteMD</h3>
-        <p>Machine learning + CGM data to monitor diabetic kidney disease and patient compliance.</p>
+        <p>
+          Built a healthcare-focused platform using machine learning and CGM data to monitor diabetic kidney disease 
+          and improve patient treatment compliance. Developed during a hackathon with hardware simulation using Arduino.
+        </p>
+        <p><a href="https://github.com/M4ttH3RR/BisonHacks25HealthTrack.git">View Project</a></p>
       </div>
 
       <div class="project">
         <h3>Password Leak Checker</h3>
-        <p>Flask app using HaveIBeenPwned API to check if passwords have been exposed.</p>
+        <p>
+          Flask web application that checks if passwords have been exposed in known data breaches using the 
+          HaveIBeenPwned API with secure hashing techniques.
+        </p>
+        <p><a href="https://password-checker.onrender.com/">View Project</a></p>
       </div>
 
       <div class="project">
         <h3>Port Scanner</h3>
-        <p>Python-based networking tool to scan open ports and analyze services.</p>
+        <p>
+          Python-based tool for scanning open ports and analyzing network services, demonstrating understanding 
+          of TCP/IP protocols and cybersecurity fundamentals.
+        </p>
+        <p><a href="https://github.com/M4ttH3RR/port-scanner.git">View Project</a></p>
       </div>
 
     </div>
   </div>
 
+  <!-- Skills -->
+  <div class="section" id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills">
+      <span>Python</span>
+      <span>C++</span>
+      <span>HTML/CSS</span>
+      <span>Flask</span>
+      <span>Machine Learning</span>
+      <span>Git & GitHub</span>
+      <span>Networking</span>
+      <span>Arduino</span>
+    </div>
+  </div>
+
   <!-- Contact -->
-  <div class="section" id="contact">
+  <div class="section contact" id="contact">
     <h2>Contact</h2>
+
     <p>
       <a href="https://github.com/M4ttH3RR">GitHub</a> |
       <a href="https://linkedin.com/in/matt-herriman">LinkedIn</a>

@@ -2,116 +2,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Matthew Herriman Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Matthew Herriman</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f172a;
+      color: white;
+    }
+
+    nav {
+      background-color: #020617;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .container {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #38bdf8;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2.5em;
+    }
+
+    p {
+      color: #94a3b8;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .projects {
+      text-align: left;
+    }
+
+    .project {
+      background: #020617;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+
+    .project h3 {
+      margin: 0;
+    }
+
+    a {
+      color: #38bdf8;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="fade-in">
-        <div class="header-top">
-            <img src="notemd-logo.png" alt="NoteMD Logo" id="logo">
-            <h1>Matthew Herriman</h1>
 
-<img src="profile.jpeg" 
-     alt="Profile Picture" 
-     style="width:200px; height:200px; border-radius:50%;">
+  <!-- Navbar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<p>Computer Science Student | Aspiring Software Engineer</p>
-        <button id="dark-mode-toggle">🌙 Dark Mode</button>
-        <a href="resume.pdf" class="resume-btn">Download Resume</a>
-    </header>
+  <!-- Hero Section -->
+  <div class="container" id="about">
+    <h1>Matthew Herriman</h1>
 
-    <!-- About Section -->
-    <section id="about" class="fade-in">
-        <h2>About Me</h2>
-        <p>Computer Science student with experience in Python, web development, and cybersecurity. Passionate about building projects that solve real-world problems.</p>
-    </section>
+    <img src="profile.jpeg" alt="Profile Picture">
 
-    <!-- Projects Section -->
-    <section id="projects" class="fade-in">
-        <h2>Projects</h2>
+    <p>Computer Science Student | Aspiring Software Engineer</p>
+  </div>
 
-        <div class="project">
-            <h3>NoteMD (Health Tracking Project)</h3>
-            <a href="https://github.com/M4ttH3RR/BisonHacks25HealthTrack" target="_blank" class="project-btn">View Project →</a>
-            <p>Developed a health monitoring system using simulated CGM data to analyze patient health trends.</p>
-            <p><strong>Tech:</strong> Python, Arduino, Machine Learning</p>
-        </div>
+  <!-- Projects -->
+  <div class="section" id="projects">
+    <h2>Projects</h2>
 
-        <div class="project">
-            <h3>Cybersecurity Port Scanner</h3>
-            <a href="https://github.com/M4ttH3RR/port-scanner" target="_blank" class="project-btn">View Project →</a>
-            <p>Python-based GUI port scanner detecting open ports.</p>
-            <p><strong>Tech:</strong> Python, Tkinter, Multithreading</p>
-        </div>
+    <div class="projects">
 
-        <div class="project">
-            <h3>Password Strength Checker</h3>
-            <a href="https://password-checker.onrender.com" target="_blank" class="project-btn">Try Live App →</a>
-            <a href="https://github.com/M4ttH3RR/password_checker" target="_blank" class="project-btn">View Code →</a>
-            <p>Web app that checks password strength and provides tips to improve security.</p>
-            <p><strong>Tech:</strong> Python, Flask, HTML, CSS</p>
-        </div>
-    </section>
+      <div class="project">
+        <h3>NoteMD</h3>
+        <p>Machine learning + CGM data to monitor diabetic kidney disease and patient compliance.</p>
+      </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="fade-in contact-section">
-    <h2>Let’s Connect</h2>
-    <p class="contact-subtext">
-        I'm actively seeking internships in cybersecurity and software development. Feel free to reach out.
-    </p>
+      <div class="project">
+        <h3>Password Leak Checker</h3>
+        <p>Flask app using HaveIBeenPwned API to check if passwords have been exposed.</p>
+      </div>
 
-    <div class="contact-buttons">
-        <a href="mailto:matthew.herriman@bison.howard.edu" class="contact-btn">
-            📧 Email Me
-        </a>
+      <div class="project">
+        <h3>Port Scanner</h3>
+        <p>Python-based networking tool to scan open ports and analyze services.</p>
+      </div>
 
-        <a href="https://github.com/M4ttH3RR" target="_blank" class="contact-btn">
-            💻 GitHub
-        </a>
-
-        <a href="https://www.linkedin.com/in/matthew-herriman-94789b28b/" target="_blank" class="contact-btn">
-            🔗 LinkedIn
-        </a>
-
-        <a href="resume.pdf" target="_blank" class="contact-btn highlight">
-    📄 Resume
-</a>
     </div>
-</section>
+  </div>
 
-    <!-- Scripts -->
-    <script>
-        // Fade-in animation
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = { threshold: 0.2 };
-        const appearOnScroll = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('show');
-                observer.unobserve(entry.target);
-            });
-        }, appearOptions);
-        faders.forEach(fader => appearOnScroll.observe(fader));
+  <!-- Contact -->
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+    <p>
+      <a href="https://github.com/M4ttH3RR">GitHub</a> |
+      <a href="https://linkedin.com/in/matt-herriman">LinkedIn</a>
+    </p>
+  </div>
 
-        // Dark mode toggle
-        const toggleBtn = document.getElementById('dark-mode-toggle');
-        if(localStorage.getItem('dark-mode') === 'true'){
-            document.body.classList.add('dark-mode');
-            toggleBtn.textContent = '☀ Light Mode';
-        }
-        toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const isDark = document.body.classList.contains('dark-mode');
-            localStorage.setItem('dark-mode', isDark);
-            toggleBtn.textContent = isDark ? '☀ Light Mode' : '🌙 Dark Mode';
-        });
-
-        // Logo spin animation
-        const logo = document.getElementById('logo');
-        logo.addEventListener('mouseenter', () => logo.classList.add('logo-spin'));
-        logo.addEventListener('mouseleave', () => logo.classList.remove('logo-spin'));
-    </script>
 </body>
 </html>

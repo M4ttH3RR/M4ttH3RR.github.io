@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <title>Matthew Herriman</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -45,7 +44,7 @@
       padding: 80px 20px;
     }
 
-    img {
+    img.profile {
       width: 170px;
       height: 170px;
       border-radius: 50%;
@@ -61,8 +60,9 @@
 
     p {
       color: #94a3b8;
-      max-width: 600px;
+      max-width: 650px;
       margin: auto;
+      line-height: 1.6;
     }
 
     .section {
@@ -78,7 +78,7 @@
 
     .projects {
       display: grid;
-      gap: 20px;
+      gap: 25px;
     }
 
     .project {
@@ -93,8 +93,29 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
 
+    .project img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
     .project h3 {
       margin-top: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background-color: #38bdf8;
+      color: black;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background-color: #0ea5e9;
     }
 
     .skills {
@@ -133,13 +154,30 @@
 
   <!-- Hero -->
   <div class="container" id="about">
-    <h1>Matthew Herriman</h1>
+    <h1 id="typing"></h1>
 
-    <img src="profile.jpeg" alt="Profile Picture">
+    <img src="profile.jpeg" alt="Profile Picture" class="profile">
 
     <p>
       Computer Science student focused on software development, cybersecurity, and data-driven systems. 
-      Experienced in building real-world projects involving machine learning, networking, and web applications.
+      I build real-world projects involving machine learning, networking, and web applications.
+    </p>
+  </div>
+
+  <!-- About Me -->
+  <div class="section">
+    <h2>About Me</h2>
+
+    <p>
+      I’m a Computer Science student with a strong interest in software engineering, cybersecurity, 
+      and data-driven systems. I enjoy building practical applications that solve real-world problems, 
+      from healthcare-focused machine learning tools to network security utilities.
+    </p>
+
+    <p>
+      Through hands-on projects like NoteMD and my password security tools, I’ve developed experience 
+      working with APIs, data analysis, and full-stack development. I’m currently seeking internship 
+      opportunities where I can contribute to meaningful projects while continuing to grow as an engineer.
     </p>
   </div>
 
@@ -150,30 +188,33 @@
     <div class="projects">
 
       <div class="project">
+        <img src="images/notemd.png">
         <h3>NoteMD</h3>
         <p>
-          Built a healthcare-focused platform using machine learning and CGM data to monitor diabetic kidney disease 
-          and improve patient treatment compliance. Developed during a hackathon with hardware simulation using Arduino.
+          Machine learning + CGM data platform to monitor diabetic kidney disease and improve patient compliance. 
+          Built during a hackathon using Arduino simulation and data analysis tools.
         </p>
-        <p><a href="https://github.com/M4ttH3RR/BisonHacks25HealthTrack.git">View Project</a></p>
+        <a href="https://github.com/M4ttH3RR/notemd" target="_blank" class="btn">View Project →</a>
       </div>
 
       <div class="project">
+        <img src="images/password.png">
         <h3>Password Leak Checker</h3>
         <p>
-          Flask web application that checks if passwords have been exposed in known data breaches using the 
-          HaveIBeenPwned API with secure hashing techniques.
+          Flask web application that checks if passwords have been exposed in data breaches using the 
+          HaveIBeenPwned API and secure hashing techniques.
         </p>
-        <p><a href="https://password-checker.onrender.com/">View Project</a></p>
+        <a href="https://github.com/M4ttH3RR/password-checker" target="_blank" class="btn">View Project →</a>
       </div>
 
       <div class="project">
+        <img src="images/portscanner.png">
         <h3>Port Scanner</h3>
         <p>
-          Python-based tool for scanning open ports and analyzing network services, demonstrating understanding 
-          of TCP/IP protocols and cybersecurity fundamentals.
+          Python-based networking tool that scans open ports and analyzes services, demonstrating 
+          knowledge of TCP/IP protocols and cybersecurity concepts.
         </p>
-        <p><a href="https://github.com/M4ttH3RR/port-scanner.git">View Project</a></p>
+        <a href="https://github.com/M4ttH3RR/port-scanner" target="_blank" class="btn">View Project →</a>
       </div>
 
     </div>
@@ -204,6 +245,22 @@
       <a href="https://linkedin.com/in/matt-herriman">LinkedIn</a>
     </p>
   </div>
+
+  <!-- Typing Animation -->
+  <script>
+    const text = "Matthew Herriman";
+    let i = 0;
+
+    function typeEffect() {
+      if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 80);
+      }
+    }
+
+    window.onload = typeEffect;
+  </script>
 
 </body>
 </html>
